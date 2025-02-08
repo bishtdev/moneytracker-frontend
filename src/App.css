@@ -1,0 +1,117 @@
+/* From Uiverse.io by Randdose */ 
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.3em 1em;
+  border: rgb(163 230 53 ) solid 0.15em;
+  border-radius: 0.25em;
+  font-size: 0.9em;
+  font-weight: 700;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.button p {
+  z-index: 1;
+}
+
+
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: rgb(163 230 53 ) ;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+
+/* button styling ends */
+
+
+/* delete button */
+/* From Uiverse.io by cssbuttons-io */ 
+.button-2 {
+  /* --color: white; */
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2em;
+  line-height: 1.7em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid red;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.button-2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: red;
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.button-2:hover {
+  color: #fff;
+}
+
+.button-2:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.button-2:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.button-2:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
+/* delete button */
